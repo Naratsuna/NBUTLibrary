@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主色调-->
+    <color name="color_main_blue">#259CFF</color>
+    <color name="color_main_blue_deep">#0E90FF</color>
+    <color name="color_main_yellow">#ffbc1c</color>
+    <color name="color_main_orange">#ffa21c</color>
+    <color name="color_main_green">#4CAF50</color>
+    <color name="color_main_red">#ff471c</color>
+    <color name="color_main_black">#333333</color>
+    <color name="color_sup_black">#666666</color>
+
+    <color name="color_main_gray_light">#DDDDDD</color>
+    <color name="color_main_gray">#CCCCCC</color>
+    <color name="color_light_gray">#363636</color>
+    <color name="color_deep_gray">#2E2E2E</color>
+    <color name="color_lite_gray">#6F6F6F</color>
+    <color name="color_hint_gray">#D5D5D5</color>
+    <color name="color_bg_gray">#F5F5F5</color>
+
+    <!--纯色-->
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+
+    <!--链接-->
+    <color name="color_link_valid">#259CFF</color>
+    <color name="color_link_invalid">#7E7E7E</color>
+
+    <!--渐变-->
+    <color name="color_grd_red_start">#FF5252</color>
+    <color name="color_grd_red_end">#FF3F3F</color>
+</resources>

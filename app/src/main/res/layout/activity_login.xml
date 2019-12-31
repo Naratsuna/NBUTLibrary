@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <View
+        android:id="@+id/view_login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_main_h"
+        android:layout_marginEnd="@dimen/margin_main_h"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_small"
+            android:text="@string/welcome"
+            android:textColor="@color/color_main_black"
+            android:textSize="@dimen/text_title_large"
+            android:textStyle="bold"
+            android:lineSpacingExtra="8dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0.8"
+            android:shadowDy="0.8"
+            android:shadowRadius="0.8"
+            app:layout_constraintBottom_toTopOf="@+id/layout_count"
+            app:layout_constraintStart_toStartOf="@id/layout_count" />
+
+        <LinearLayout
+            android:id="@+id/layout_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:background="@drawable/shape_ret_big"
+            android:backgroundTint="@color/color_white"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            app:layout_constraintTop_toBottomOf="@id/textView_title">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/ic_size_small"
+                android:layout_height="@dimen/ic_size_small"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/color_main_blue"
+                app:srcCompat="@mipmap/ic_count" />
+
+            <EditText
+                android:id="@+id/editText_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_lite"
+                android:background="@null"
+                android:hint="学号"
+                android:ems="11"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_large"
+                android:textColorHint="@color/color_hint_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/shape_ret_big"
+            android:backgroundTint="@color/color_white"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            app:layout_constraintTop_toBottomOf="@id/layout_count"
+            tools:layout_editor_absoluteX="20dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/ic_size_small"
+                android:layout_height="@dimen/ic_size_small"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/color_main_blue"
+                app:srcCompat="@mipmap/ic_pwd" />
+
+            <EditText
+                android:id="@+id/editText_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_lite"
+                android:background="@null"
+                android:ems="11"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_large"
+                android:textColorHint="@color/color_hint_gray" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/shape_ret_big"
+            android:backgroundTint="@color/color_main_blue"
+            android:text="登录"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="0.5"
+            android:textSize="@dimen/text_body_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_pwd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码"
+        android:textSize="@dimen/text_body"
+        android:textColor="@color/color_link_valid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/margin_main_v"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

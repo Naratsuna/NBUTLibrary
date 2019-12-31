@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_bg_gray"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <View
+        android:id="@+id/view_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone" />
+
+    <com.noober.background.view.BLConstraintLayout
+        android:id="@+id/id_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_deep_gray"
+        app:bl_corners_radius="@dimen/radius_small"
+        app:bl_solid_color="@color/color_deep_gray"
+        app:bl_gradient_startColor="@color/color_light_gray"
+        app:bl_gradient_endColor="@color/color_deep_gray"
+        app:bl_gradient_angle="0"
+        android:layout_marginStart="@dimen/margin_main_h"
+        android:layout_marginEnd="@dimen/margin_main_h"
+        app:layout_constraintTop_toBottomOf="@id/view_homepage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/padding_big"
+        android:paddingTop="@dimen/padding_big"
+        android:paddingBottom="@dimen/padding_big"
+        android:paddingEnd="@dimen/padding_big"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="15"
+        >
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text=""
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_lite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_simple_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_lite"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text=""
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_lite"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/borrow_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_lite"
+            android:alpha="0.8"
+            android:text="借书情况："
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_body_lite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_simple_info" />
+
+        <TextView
+            android:id="@+id/borrow_state_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/text_body_lite"
+            android:textColor="@color/color_white"
+            app:layout_constraintTop_toTopOf="@id/borrow_state"
+            app:layout_constraintStart_toEndOf="@id/borrow_state"
+            android:alpha="0.8"/>
+
+
+        <TextView
+            android:id="@+id/textView_debt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_lite"
+            android:text="@string/homepage_debt"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_body_lite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/borrow_state"
+            android:alpha="0.8"/>
+
+        <com.noober.background.view.BLImageView
+            android:id="@+id/imageView_avatar"
+            android:layout_width="@dimen/ic_size_large_lite"
+            android:layout_height="@dimen/ic_size_large_lite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:bl_corners_radius="@dimen/radius_large"
+            app:bl_solid_color="@color/color_white"
+            app:srcCompat="@mipmap/default_avatar_boy"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/textView_stuId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.5"
+            android:text="@string/homepage_stu_id"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_body_lite"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/padding_big"
+            app:layout_constraintEnd_toEndOf="@id/imageView_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/textView_debt" />
+
+        <LinearLayout
+            android:id="@+id/layout_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageButton
+                android:id="@+id/imageButton_setting"
+                android:layout_width="@dimen/ic_size_small"
+                android:layout_height="@dimen/ic_size_small"
+                android:background="@mipmap/ic_setting_lite"
+                android:backgroundTint="@color/color_white"
+                android:shadowColor="#ffffff"
+                android:shadowDx="0.3"
+                android:shadowDy="0.3"
+                android:shadowRadius="0.3"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_logout"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_body_lite"
+                android:layout_marginStart="@dimen/padding_little"/>
+        </LinearLayout>
+
+
+    </com.noober.background.view.BLConstraintLayout>
+
+    <com.noober.background.view.BLConstraintLayout
+        android:id="@+id/button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_main_v"
+        android:layout_marginStart="@dimen/margin_main_h"
+        android:layout_marginEnd="@dimen/margin_main_h"
+        android:padding="@dimen/padding_small"
+        app:bl_corners_radius="@dimen/radius_small"
+        app:bl_solid_color="@color/color_white"
+        app:layout_constraintTop_toBottomOf="@id/id_card"
+        android:shadowColor="#000000"
+        android:shadowDx="0.3"
+        android:shadowDy="0.3"
+        android:shadowRadius="0.3">
+
+        <Button
+            android:id="@+id/button_borrow"
+            android:layout_width="@dimen/ic_size_biggest"
+            android:layout_height="@dimen/ic_size_biggest"
+            android:background="@drawable/shape_ret_grd_blue"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text="借"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_return"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_return"
+            android:layout_width="@dimen/ic_size_biggest"
+            android:layout_height="@dimen/ic_size_biggest"
+            android:background="@drawable/shape_ret_grd_blue"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text="还"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_renew"
+            app:layout_constraintStart_toEndOf="@id/button_borrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_renew"
+            android:layout_width="@dimen/ic_size_biggest"
+            android:layout_height="@dimen/ic_size_biggest"
+            android:background="@drawable/shape_ret_grd_blue"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text="续"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_pay"
+            app:layout_constraintStart_toEndOf="@+id/button_return"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_pay"
+            android:layout_width="@dimen/ic_size_biggest"
+            android:layout_height="@dimen/ic_size_biggest"
+            android:background="@drawable/shape_ret_grd_blue"
+            android:shadowColor="#ffffff"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text="缴"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_title_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_renew"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </com.noober.background.view.BLConstraintLayout>
+
+    <com.noober.background.view.BLConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/button_group"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/margin_main_h"
+        android:layout_marginTop="@dimen/margin_main_v"
+        android:layout_marginEnd="@dimen/margin_main_h"
+        android:layout_marginBottom="@dimen/margin_main_v"
+        app:bl_solid_color="@color/color_white"
+        app:bl_corners_radius="@dimen/radius_small"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small">
+
+
+        <TextView
+            android:id="@+id/textView_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/homepage_recent_title"
+            android:textSize="@dimen/text_body"
+            android:shadowColor="#000000"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:textColor="@color/color_main_black"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_recent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_main_v"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_recent" />
+
+        <TextView
+            android:id="@+id/textView_no_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.3"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="0.3"
+            android:shadowDy="0.3"
+            android:shadowRadius="0.3"
+            android:text="@string/homepage_no_recent_book"
+            android:textColor="@color/color_light_gray"
+            android:textSize="@dimen/text_body_lite"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_recent"
+            tools:visibility="visible" />
+    </com.noober.background.view.BLConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

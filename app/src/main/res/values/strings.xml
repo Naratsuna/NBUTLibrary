@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">宁工图书馆</string>
+    <string name="welcome">欢迎使用\n宁工图书馆</string>
+    <!--login界面-->
+    <string name="login_login">登录</string>
+    <string name="login_reg">注册</string>
+    <string name="login_logout">注销</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_error_pwd">密码错误</string>
+    <string name="login_error_user">用户名错误</string>
+
+    <!--主界面-->
+    <string name="homepage_recent_title">近期借阅</string>
+    <string name="homepage_no_recent_book">主人有点懒，最近没有借书呢</string>
+    <string name="homepage_query_error">查询失败</string>
+    <string name="homepage_username">用户名：</string>
+    <string name="homepage_college">学院：</string>
+    <string name="homepage_discipline">专业：</string>
+    <string name="homepage_state_borrow">借书情况：</string>
+    <string name="homepage_debt">欠费：</string>
+    <string name="homepage_stu_id">No.</string>
+
+    <!--书本详情页-->
+    <string name="book_name">书名：</string>
+    <string name="book_author">作者：</string>
+    <string name="book_publish">出版社：</string>
+    <string name="book_intro">简介：</string>
+    <string name="book_quantity">数量：</string>
+    <string name="book_isbn">书编号：</string>
+    <string name="book_shelf">书架号：</string>
+    <string name="book_position">位置：</string>
+    <string name="book_price">定价：</string>
+    <string name="book_booking_state">预订状态：</string>
+    <string name="book_borrow_state">借阅状态：</string>
+    <string name="book_last_user">上次借阅读者：</string>
+    <string name="book_last_time">上次归还时间：</string>
+    <string name="book_like">想看</string>
+    <string name="book_like_cancel">取消想看</string>
+    <string name="book_booking">预订</string>
+    <string name="book_booking_cancel">取消预订</string>
+
+    <!--搜索-->
+    <string name="search_no_result">嗷呜，你的搜索有点特殊哦！\n换个关键字试试吧</string>
+    <string name="search_title">搜索结果</string>
+    <string name="search">搜索</string>
+
+</resources>

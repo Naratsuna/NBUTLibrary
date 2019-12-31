@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_white"
+    android:paddingEnd="@dimen/margin_main_h"
+    android:paddingStart="@dimen/margin_main_h"
+    android:paddingTop="@dimen/margin_main_v"
+    tools:ignore="MissingPrefix">
+
+    <View
+        android:id="@+id/view_book_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_book_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_main_v">
+
+        <com.noober.background.view.BLImageView
+            android:id="@+id/book_detail_cover"
+            android:layout_width="@dimen/book_width_150x"
+            android:layout_height="@dimen/book_height_150x"
+            app:bl_solid_color="@color/color_bg_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:bl_corners_radius="@dimen/radius_small"/>
+
+        <com.noober.background.view.BLConstraintLayout
+            android:id="@+id/book_info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_main_h"
+            app:layout_constraintBottom_toBottomOf="@id/book_detail_cover"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/book_detail_cover"
+            app:layout_constraintTop_toTopOf="parent"
+            android:ellipsize="marquee"
+            android:singleLine="true">
+
+            <TextView
+                android:id="@+id/book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_name"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toTopOf="@id/book_author"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_author"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toTopOf="@id/book_publish"
+                app:layout_constraintTop_toBottomOf="@id/book_name"
+                android:ellipsize="marquee"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/book_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_publish"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toTopOf="@id/book_shelf"
+                app:layout_constraintTop_toBottomOf="@id/book_author"
+                android:ellipsize="marquee"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/book_shelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_shelf"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toTopOf="@id/book_position"
+                app:layout_constraintTop_toBottomOf="@id/book_publish" />
+            <TextView
+                android:id="@+id/book_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_position"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toTopOf="@id/book_shelf"
+                app:layout_constraintTop_toBottomOf="@id/book_state" />
+
+
+            <TextView
+                android:id="@+id/book_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_borrow_state"
+                android:textColor="@color/color_main_black"
+                android:textSize="@dimen/text_body_lite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/book_position" />
+
+        </com.noober.background.view.BLConstraintLayout>
+
+        <TextView
+            android:id="@+id/book_intro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/book_intro"
+            android:textColor="@color/color_main_black"
+            android:textSize="@dimen/text_body_lite"
+            app:layout_constraintTop_toBottomOf="@id/book_detail_cover"
+            app:layout_constraintStart_toStartOf="@id/book_detail_cover"
+            android:layout_marginTop="@dimen/margin_main_h"/>
+
+        <TextView
+            android:id="@+id/book_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\t\t\t\t"
+            android:textColor="@color/color_main_black"
+            android:textSize="@dimen/text_body_lite"
+            app:layout_constraintTop_toBottomOf="@id/book_intro_title"
+            app:layout_constraintStart_toStartOf="@id/book_intro_title"
+            android:layout_marginTop="@dimen/padding_lite"/>
+
+        <com.noober.background.view.BLConstraintLayout
+            android:id="@+id/button_like"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/book_detail_button_space"
+            app:bl_gradient_startColor="@color/color_grd_red_start"
+            app:bl_gradient_endColor="@color/color_grd_red_end"
+            app:bl_gradient_angle="0"
+            app:bl_corners_radius="@dimen/radius_lite"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:id="@+id/ic_like"
+                android:layout_width="@dimen/ic_size_small"
+                android:layout_height="@dimen/ic_size_small"
+                android:background="@mipmap/ic_like"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textView_like"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/textView_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_like"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_body"
+                app:layout_constraintStart_toEndOf="@id/ic_like"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/padding_lite"
+                />
+
+        </com.noober.background.view.BLConstraintLayout>
+
+        <View
+            android:id="@+id/book_detail_button_space"
+            android:layout_width="@dimen/padding_small"
+            android:layout_height="@dimen/btn_height"
+            app:layout_constraintBottom_toBottomOf="@id/button_like"
+            app:layout_constraintEnd_toStartOf="@id/button_booking"
+            app:layout_constraintStart_toEndOf="@id/button_like"
+            app:layout_constraintTop_toTopOf="@+id/button_booking" />
+
+
+        <com.noober.background.view.BLConstraintLayout
+            android:id="@+id/button_booking"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/book_detail_button_space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:bl_gradient_startColor="@color/color_main_blue"
+            app:bl_gradient_endColor="@color/color_main_blue_deep"
+            app:bl_gradient_angle="0"
+            app:bl_corners_radius="@dimen/radius_lite"
+            app:layout_constraintHorizontal_chainStyle="spread_inside">
+
+            <ImageView
+                android:id="@+id/ic_booking"
+                android:layout_width="@dimen/ic_size_small"
+                android:layout_height="@dimen/ic_size_small"
+                android:background="@mipmap/ic_booking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textView_booking"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/textView_booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_booking"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_body"
+                app:layout_constraintStart_toEndOf="@id/ic_booking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/padding_lite"/>
+
+        </com.noober.background.view.BLConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

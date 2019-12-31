@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体-->
+    <dimen name="text_title_large">24sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_title_lite">16sp</dimen>
+    <dimen name="text_body_large">18sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_body_lite">14sp</dimen>
+    <dimen name="text_sup_large">12sp</dimen>
+    <dimen name="text_sup">10sp</dimen>
+    <dimen name="text_sup_lite">8sp</dimen>
+
+    <!--外边距-->
+    <!--两侧边距-->
+    <dimen name="margin_main_h_left">16dp</dimen>
+    <dimen name="margin_main_h_right">16dp</dimen>
+    <dimen name="margin_main_h">16dp</dimen>
+    <!--上下边距-->
+    <dimen name="margin_main_v_top">8dp</dimen>
+    <dimen name="margin_main_v_bottom">16dp</dimen>
+    <dimen name="margin_main_v">16dp</dimen>
+    <!--标题栏高度-->
+    <dimen name="action_bar">68dp</dimen>
+    <!--导航栏高度-->
+    <dimen name="nav_bar">48dp</dimen>
+
+    <!--内边距-->
+    <dimen name="padding_little">5dp</dimen>
+    <dimen name="padding_lite">10dp</dimen>
+    <dimen name="padding_small">15dp</dimen>
+    <dimen name="padding_medium">20dp</dimen>
+    <dimen name="padding_big">25dp</dimen>
+    <dimen name="padding_bigger">30dp</dimen>
+    <dimen name="padding_biggest">40dp</dimen>
+    <dimen name="padding_large">50dp</dimen>
+    <dimen name="padding_largest">60dp</dimen>
+
+    <!--圆角-->
+    <dimen name="radius_little">5dp</dimen>
+    <dimen name="radius_lite">10dp</dimen>
+    <dimen name="radius_small">15dp</dimen>
+    <dimen name="radius_medium">20dp</dimen>
+    <dimen name="radius_big">25dp</dimen>
+    <dimen name="radius_bigger">30dp</dimen>
+    <dimen name="radius_biggest">40dp</dimen>
+    <dimen name="radius_large">50dp</dimen>
+    <dimen name="radius_largest">60dp</dimen>
+
+    <!--icon大小-->
+    <dimen name="ic_size_lite">12dp</dimen>
+    <dimen name="ic_size_small">18dp</dimen>
+    <dimen name="ic_size_medium">24dp</dimen>
+    <dimen name="ic_size_big">30dp</dimen>
+    <dimen name="ic_size_bigger">48dp</dimen>
+    <dimen name="ic_size_biggest">60dp</dimen>
+    <dimen name="ic_size_large_lite">72dp</dimen>
+    <dimen name="ic_size_large">96dp</dimen>
+    <dimen name="ic_size_largest">128dp</dimen>
+
+    <!--阴影大小-->
+    <dimen name="elevation_lite">2dp</dimen>
+    <dimen name="elevation_small">4dp</dimen>
+    <dimen name="elevation_medium">6dp</dimen>
+    <dimen name="elevation_big">8dp</dimen>
+    <dimen name="elevation_large">10dp</dimen>
+
+    <!--书本的长宽8:10-->
+    <dimen name="book_width">96dp</dimen>
+    <dimen name="book_height">120dp</dimen>
+    <dimen name="book_width_150x">144dp</dimen>
+    <dimen name="book_height_150x">180dp</dimen>
+
+    <!--按钮的高度-->
+    <dimen name="btn_height">48dp</dimen>
+</resources>

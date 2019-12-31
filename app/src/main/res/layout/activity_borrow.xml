@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:paddingStart="@dimen/margin_main_h"
+    android:paddingEnd="@dimen/margin_main_h"
+    tools:ignore="MissingPrefix">
+
+    <View
+        android:id="@+id/view_borrow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bar_search"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:bl_solid_color="@color/color_bg_gray"
+        app:bl_corners_radius="@dimen/radius_medium"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_little"
+        android:paddingBottom="@dimen/padding_little"
+        app:layout_constraintTop_toBottomOf="@id/view_borrow">
+
+        <ImageView
+            android:layout_width="@dimen/ic_size_small"
+            android:layout_height="@dimen/ic_size_small"
+            android:background="@mipmap/ic_search_lite"
+            android:backgroundTint="@color/color_lite_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="搜索"
+            android:maxLines="1"
+            android:textColor="@color/color_main_black"
+            android:textColorHint="@color/color_lite_gray"
+            android:textSize="@dimen/text_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.noober.background.view.BLConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/bar_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/margin_main_v"
+        app:bl_solid_color="@color/color_white"
+        app:bl_corners_radius="@dimen/radius_small">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_book_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </com.noober.background.view.BLConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

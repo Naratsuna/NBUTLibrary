@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="Library"></dbname>
+    <version value="1"></version>
+
+    <list>
+        <mapping class="com.example.library.entity.Book"></mapping>
+        <mapping class="com.example.library.entity.ShelvesInfo"></mapping>
+        <mapping class="com.example.library.entity.TableBorrow"></mapping>
+        <mapping class="com.example.library.entity.User"></mapping>
+        <mapping class="com.example.library.entity.StateTable"></mapping>
+        <mapping class="com.example.library.entity.BookShelf"></mapping>
+        <mapping class="com.example.library.entity.PeriodSetting"></mapping>
+        <mapping class="com.example.library.entity.Position"></mapping>
+    </list>
+</litepal>

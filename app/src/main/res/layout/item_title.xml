@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门推荐"
+        android:textSize="@dimen/text_body"
+        android:shadowColor="#000000"
+        android:shadowDx="0.3"
+        android:shadowDy="0.3"
+        android:shadowRadius="0.3"
+        android:textColor="@color/color_main_black"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:layout_marginBottom="@dimen/margin_main_v"
+        />
+</LinearLayout>

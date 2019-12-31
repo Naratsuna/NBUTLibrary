@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--"H,2:3"指的是 高:宽=2:3-->
+    <com.youth.banner.Banner
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_search"
+        android:layout_marginBottom="@dimen/margin_main_v"
+        app:bl_corners_radius="4dp"
+        app:indicator_drawable_selected="@drawable/shape_ret_lite_white"
+        tools:background="@color/color_bg_gray"
+        />
+
+</LinearLayout>
