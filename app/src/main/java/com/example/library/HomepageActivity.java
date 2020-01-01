@@ -7,14 +7,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.library.utils.Utils;
-import com.example.library.action.SharePrefAction;
 import com.example.library.adapter.RecentBookAdapter;
 import com.example.library.collector.ActivityCollector;
 import com.example.library.entity.TableBorrow;
@@ -52,10 +50,8 @@ public class HomepageActivity extends BaseActivity implements View.OnClickListen
     private TextView debt;
     private TextView stuId;
     private LinearLayout logout;
-    private Button btn_borrow;
-    private Button btn_return;
-    private Button btn_renew;
-    private Button btn_pay;
+    private View btn_library;
+    private View btn_my;
     private ImageView avatar;
 
     @Override
@@ -77,7 +73,8 @@ public class HomepageActivity extends BaseActivity implements View.OnClickListen
         List<TableBorrow> borrowList;
         borrowList = LitePal
                 .where("stuId = ?",count)
-                .order("id desc")//按借书时间降序排序
+                .order("dateBorrow desc")//按借书时间降序排序
+                .limit(10)//取前十个
                 .find(TableBorrow.class);
         return borrowList;
     }
@@ -85,22 +82,18 @@ public class HomepageActivity extends BaseActivity implements View.OnClickListen
      * 初始化view
      */
     private void initView(){
-        no_recent = findViewById(R.id.textView_no_recent);
+        no_recent = findViewById(R.id.textView_no_history);
         userName = findViewById(R.id.username);
         info = findViewById(R.id.user_simple_info);
         borrowInfo = findViewById(R.id.borrow_state_num);
         debt = findViewById(R.id.textView_debt);
         stuId = findViewById(R.id.textView_stuId);
         logout = findViewById(R.id.layout_logout);
-        btn_borrow = findViewById(R.id.button_borrow);
-        btn_return = findViewById(R.id.button_return);
-        btn_renew = findViewById(R.id.button_renew);
-        btn_pay = findViewById(R.id.button_pay);
+        btn_library = findViewById(R.id.button_library);
+        btn_my = findViewById(R.id.button_my_book);
         logout.setOnClickListener(this);
-        btn_borrow.setOnClickListener(this);
-        btn_return.setOnClickListener(this);
-        btn_renew.setOnClickListener(this);
-        btn_pay.setOnClickListener(this);
+        btn_library.setOnClickListener(this);
+        btn_my.setOnClickListener(this);
         avatar = findViewById(R.id.imageView_avatar);
 
         recent = findViewById(R.id.recyclerView_recent);
@@ -136,14 +129,11 @@ public class HomepageActivity extends BaseActivity implements View.OnClickListen
                 ActivityCollector.finishAll();
                 startActivity(new Intent(this,LoginActivity.class));
                 break;
-            case R.id.button_borrow:
+            case R.id.button_library:
                 checkPermission();//动态申请权限
                 break;
-            case R.id.button_return:
-                break;
-            case R.id.button_renew:
-                break;
-            case R.id.button_pay:
+            case R.id.button_my_book:
+                startActivity(new Intent(this,MyBookActivity.class));
                 break;
             default:
                 break;

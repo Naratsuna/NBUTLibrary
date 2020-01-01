@@ -1,5 +1,8 @@
 package com.example.library.entity;
 
+import com.example.library.MyApplication;
+
+import org.litepal.LitePal;
 import org.litepal.annotation.Column;
 import org.litepal.crud.LitePalSupport;
 
@@ -21,6 +24,8 @@ public class User extends LitePalSupport {
     private String password;
 
     private String tableBorrowId;//借书表
+
+    private int historyBorrowedCount;//历史借书数
 
     @Column(defaultValue = "false")
     boolean block;//黑名单
@@ -107,6 +112,9 @@ public class User extends LitePalSupport {
     }
 
     public int getBooksBorrow() {
+        booksBorrow = LitePal.where("stateTableId in (?,?,?) and stuId = ?"
+                ,String.valueOf(TableBorrow.STATE_BORROW),String.valueOf(TableBorrow.STATE_DELAY),String.valueOf(TableBorrow.STATE_RETURN), MyApplication.getCount())
+                .find(TableBorrow.class).size();
         return booksBorrow;
     }
 
@@ -128,5 +136,13 @@ public class User extends LitePalSupport {
 
     public void setGentle(String gentle) {
         this.gentle = gentle;
+    }
+
+    public int getHistoryBorrowedCount() {
+        return historyBorrowedCount;
+    }
+
+    public void setHistoryBorrowedCount(int historyBorrowedCount) {
+        this.historyBorrowedCount = historyBorrowedCount;
     }
 }

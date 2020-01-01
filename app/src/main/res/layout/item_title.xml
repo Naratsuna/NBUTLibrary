@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="热门推荐"
         android:textSize="@dimen/text_body"
-        android:shadowColor="#000000"
+        android:shadowColor="#333333"
         android:shadowDx="0.3"
         android:shadowDy="0.3"
         android:shadowRadius="0.3"

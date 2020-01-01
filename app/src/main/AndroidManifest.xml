@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".BookDetailActivity"></activity>
+        <activity android:name=".MyBookActivity"></activity>
+        <activity android:name=".BookDetailActivity" />
         <activity android:name=".BorrowActivity" />
         <activity android:name=".HomepageActivity" />
         <activity android:name=".MainActivity">

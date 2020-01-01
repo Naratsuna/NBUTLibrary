@@ -1,11 +1,13 @@
 package com.example.library.entity;
 
 import android.util.Log;
-
+import com.example.library.utils.Utils;
 import org.litepal.LitePal;
 import org.litepal.crud.LitePalSupport;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class TableBorrow extends LitePalSupport {
 
@@ -24,6 +26,12 @@ public class TableBorrow extends LitePalSupport {
     private String dateRe;
     private String realDateRe;
     private String dateBorrow;//所有的时间都是由服务器提供
+//    private boolean renewable;//是否可续借
+
+    public boolean isRenewable() {
+        //在借并且借期一个月
+        return Utils.getMonthsBetweenTwoDate(dateBorrow, dateRe) == 1&&stateTableId == STATE_BORROW;
+    }
 
     public String getState(){
 //        Log.d(TAG, "getState: "+ stateTableId);
@@ -113,7 +121,7 @@ public class TableBorrow extends LitePalSupport {
     }
 
     public String getRealDateRe() {
-        return realDateRe;
+        return realDateRe == null?"":realDateRe;
     }
 
     public void setRealDateRe(String realDateRe) {
@@ -126,6 +134,8 @@ public class TableBorrow extends LitePalSupport {
 
     public void setDateBorrow(String dateBorrow) {
         this.dateBorrow = dateBorrow;
+        this.dateRe = Utils.getDateAfterAddDays(dateBorrow,getPeriodReturn());
+        Log.d(TAG, "setDateBorrow: 还书时间" + dateRe);
     }
 
     public int getPeriodSettingId() {

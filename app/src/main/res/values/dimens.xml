@@ -48,6 +48,7 @@
     <dimen name="radius_largest">60dp</dimen>
 
     <!--icon大小-->
+    <dimen name="ic_size_little">8dp</dimen>
     <dimen name="ic_size_lite">12dp</dimen>
     <dimen name="ic_size_small">18dp</dimen>
     <dimen name="ic_size_medium">24dp</dimen>
@@ -73,4 +74,17 @@
 
     <!--按钮的高度-->
     <dimen name="btn_height">48dp</dimen>
+
+    <!--下划线条粗细-->
+    <dimen name="tab_line_size">3dp</dimen>
+    <!--下划线条与文字间距-->
+    <dimen name="tab_line_padding">10dp</dimen>
+
+    <!--指示线粗细-->
+    <dimen name="line_void">1dp</dimen>
+    <!--指示线与文字间距-->
+    <dimen name="line_void_padding">10dp</dimen>
+
+    <!--字体上下间距-->
+    <dimen name="text_space_in_line">8dp</dimen>
 </resources>

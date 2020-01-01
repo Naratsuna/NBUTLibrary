@@ -25,17 +25,17 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="e9fca83e-6d16-4208-a04b-575fbf3fa06e">
-        <schema name="main" object-types="constraint, table, view, index, column, dataset trigger" />
+        <schema name="main" object-types="view, table" />
       </connection>
       <connection connection-id="60f625be-5365-46a1-9f2d-75664c9baf92">
-        <schema name="main" object-types="constraint, table, view, index, column, dataset trigger" />
+        <schema name="main" object-types="view, table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="e9fca83e-6d16-4208-a04b-575fbf3fa06e">
-      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[delete *
-from book]]></console>
+      <console name="Connection" type="STANDARD" schema="main" session="Main">delete *
+from book</console>
     </connection>
     <connection id="60f625be-5365-46a1-9f2d-75664c9baf92">
       <console name="K20" type="STANDARD" schema="main" session="Main" />

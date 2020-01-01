@@ -134,7 +134,7 @@ public class InitAction {
         user.setDiscipline(list[3]);
         user.setPassword(list[4]);
         user.setGentle(list[5]);
-//        user.setId(Integer.valueOf(list[6]));
+        user.setHistoryBorrowedCount(Integer.valueOf(list[6]));
         user.setBooksAll(10);
         user.setBooksBorrow(0);
         user.save();
@@ -165,7 +165,7 @@ public class InitAction {
         tableBorrow.setDateRe(list[3]);
         tableBorrow.setRealDateRe(list[4]);
         tableBorrow.setStateTableId(Integer.valueOf(list[5]));
-//        tableBorrow.setId(Integer.valueOf(list[6]));
+        tableBorrow.setPeriodSettingId(Integer.valueOf(list[6]));
         tableBorrow.save();
     }
 

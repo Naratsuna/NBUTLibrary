@@ -41,7 +41,7 @@
             android:textSize="@dimen/text_title_large"
             android:textStyle="bold"
             android:lineSpacingExtra="8dp"
-            android:shadowColor="#000000"
+            android:shadowColor="#333333"
             android:shadowDx="0.8"
             android:shadowDy="0.8"
             android:shadowRadius="0.8"

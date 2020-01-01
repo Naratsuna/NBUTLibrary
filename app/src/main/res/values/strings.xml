@@ -11,7 +11,7 @@
 
     <!--主界面-->
     <string name="homepage_recent_title">近期借阅</string>
-    <string name="homepage_no_recent_book">主人有点懒，最近没有借书呢</string>
+    <string name="homepage_no_recent_book">主人有点懒,\n最近没有借书呢</string>
     <string name="homepage_query_error">查询失败</string>
     <string name="homepage_username">用户名：</string>
     <string name="homepage_college">学院：</string>
@@ -19,6 +19,8 @@
     <string name="homepage_state_borrow">借书情况：</string>
     <string name="homepage_debt">欠费：</string>
     <string name="homepage_stu_id">No.</string>
+    <string name="homepage_btn_borrow">图书借阅</string>
+    <string name="homepage_btn_my_book">我的借阅</string>
 
     <!--书本详情页-->
     <string name="book_name">书名：</string>
@@ -44,4 +46,11 @@
     <string name="search_title">搜索结果</string>
     <string name="search">搜索</string>
 
+    <!--我的借阅-->
+    <string name="my_book_count_all">总借阅数</string>
+    <string name="my_book_count_now">在借书籍</string>
+    <string name="my_book_debt">逾期欠款</string>
+    <string name="my_book_default_words">这个人很懒，一句话都不说。</string>
+    <string name="my_book_title_all">所有借阅</string>
+    <string name="my_book_no_history">嗷呜，居然什么都没有！</string>
 </resources>

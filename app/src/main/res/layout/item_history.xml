@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_history_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingStart="@dimen/padding_medium"
+    android:paddingEnd="@dimen/padding_medium"
+    app:bl_corners_radius="@dimen/radius_small"
+    app:bl_solid_color="@color/color_white"
+    android:background="@drawable/shape_ret_grd_blue"
+    android:layout_marginBottom="@dimen/margin_main_v">
+
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="0.5"
+        android:text="书名"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_title_lite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/book_borrow_time"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/book_borrow_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="借阅时间："
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_body_lite"
+        app:layout_constraintBottom_toTopOf="@+id/book_return_time_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_name"
+        android:layout_marginTop="@dimen/text_space_in_line"/>
+
+    <TextView
+        android:id="@+id/book_borrow_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_body_lite"
+        app:layout_constraintStart_toEndOf="@id/book_borrow_time_title"
+        app:layout_constraintTop_toTopOf="@id/book_borrow_time_title"/>
+
+    <TextView
+        android:id="@+id/book_return_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_body_lite"
+        app:layout_constraintStart_toEndOf="@id/book_return_time_title"
+        app:layout_constraintTop_toTopOf="@id/book_return_time_title"/>
+
+    <TextView
+        android:id="@+id/book_return_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还书时间："
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_body_lite"
+        app:layout_constraintBottom_toTopOf="@+id/book_renewable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_borrow_time_title"
+        android:layout_marginTop="@dimen/text_space_in_line" />
+
+    <TextView
+        android:id="@+id/book_renewable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_space_in_line"
+        android:text="是否可续借："
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_body_lite"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_return_time" />
+
+
+    <com.noober.background.view.BLConstraintLayout
+        android:id="@+id/layout_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/book_name"
+        app:layout_constraintTop_toTopOf="@id/book_name"
+        app:layout_constraintBottom_toBottomOf="@id/book_name">
+
+        <com.noober.background.view.BLView
+            android:id="@+id/book_state_point"
+            android:layout_width="@dimen/ic_size_little"
+            android:layout_height="@dimen/ic_size_little"
+            android:layout_marginEnd="@dimen/text_space_in_line"
+            app:bl_corners_radius="@dimen/radius_small"
+            app:bl_solid_color="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/book_state"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/text_space_in_line"/>
+
+        <TextView
+            android:id="@+id/book_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_sup_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/book_state_point" />
+
+    </com.noober.background.view.BLConstraintLayout>
+
+    <com.noober.background.view.BLButton
+        android:id="@+id/btn_renew"
+        android:layout_width="@dimen/ic_size_bigger"
+        android:layout_height="@dimen/ic_size_bigger"
+        app:bl_corners_radius="@dimen/radius_largest"
+        app:bl_solid_color="@color/color_white"
+        android:text="续"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/color_main_blue"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

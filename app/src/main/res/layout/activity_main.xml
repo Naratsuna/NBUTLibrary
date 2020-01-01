@@ -23,7 +23,7 @@
         android:textSize="@dimen/text_title_large"
         android:textStyle="bold"
         android:gravity="center"
-        android:shadowColor="#000000"
+        android:shadowColor="#333333"
         android:shadowDx="0.3"
         android:shadowDy="0.3"
         android:shadowRadius="0.3"
